@@ -1,0 +1,140 @@
+{
+  "package": "inno_medical_imaging_qc",
+  "trl_claim": 4,
+  "data": "synthetic only",
+  "all_pass": true,
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "qc_recall": 1.0,
+        "qc_false_reject": 0.0,
+        "lesion_auc": 0.9901,
+        "top_quartile_precision": 1.0,
+        "n_images": 300
+      },
+      "criteria": [
+        {
+          "metric": "qc_recall",
+          "op": ">=",
+          "threshold": 0.9,
+          "value": 1.0,
+          "pass": true,
+          "description": "defective images flagged by QC"
+        },
+        {
+          "metric": "qc_false_reject",
+          "op": "<=",
+          "threshold": 0.1,
+          "value": 0.0,
+          "pass": true,
+          "description": "good images wrongly rejected by QC"
+        },
+        {
+          "metric": "lesion_auc",
+          "op": ">=",
+          "threshold": 0.85,
+          "value": 0.9901,
+          "pass": true,
+          "description": "ROC AUC of suspicion score (QC-passed images)"
+        },
+        {
+          "metric": "top_quartile_precision",
+          "op": ">=",
+          "threshold": 0.9,
+          "value": 1.0,
+          "pass": true,
+          "description": "share of lesion images within the top 25% of the read order"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "qc_recall": 1.0,
+        "qc_false_reject": 0.0,
+        "lesion_auc": 0.9799,
+        "top_quartile_precision": 0.9821,
+        "n_images": 300
+      },
+      "criteria": [
+        {
+          "metric": "qc_recall",
+          "op": ">=",
+          "threshold": 0.9,
+          "value": 1.0,
+          "pass": true,
+          "description": "defective images flagged by QC"
+        },
+        {
+          "metric": "qc_false_reject",
+          "op": "<=",
+          "threshold": 0.1,
+          "value": 0.0,
+          "pass": true,
+          "description": "good images wrongly rejected by QC"
+        },
+        {
+          "metric": "lesion_auc",
+          "op": ">=",
+          "threshold": 0.85,
+          "value": 0.9799,
+          "pass": true,
+          "description": "ROC AUC of suspicion score (QC-passed images)"
+        },
+        {
+          "metric": "top_quartile_precision",
+          "op": ">=",
+          "threshold": 0.9,
+          "value": 0.9821,
+          "pass": true,
+          "description": "share of lesion images within the top 25% of the read order"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "qc_recall": 1.0,
+        "qc_false_reject": 0.0,
+        "lesion_auc": 0.9816,
+        "top_quartile_precision": 1.0,
+        "n_images": 300
+      },
+      "criteria": [
+        {
+          "metric": "qc_recall",
+          "op": ">=",
+          "threshold": 0.9,
+          "value": 1.0,
+          "pass": true,
+          "description": "defective images flagged by QC"
+        },
+        {
+          "metric": "qc_false_reject",
+          "op": "<=",
+          "threshold": 0.1,
+          "value": 0.0,
+          "pass": true,
+          "description": "good images wrongly rejected by QC"
+        },
+        {
+          "metric": "lesion_auc",
+          "op": ">=",
+          "threshold": 0.85,
+          "value": 0.9816,
+          "pass": true,
+          "description": "ROC AUC of suspicion score (QC-passed images)"
+        },
+        {
+          "metric": "top_quartile_precision",
+          "op": ">=",
+          "threshold": 0.9,
+          "value": 1.0,
+          "pass": true,
+          "description": "share of lesion images within the top 25% of the read order"
+        }
+      ]
+    }
+  ]
+}
